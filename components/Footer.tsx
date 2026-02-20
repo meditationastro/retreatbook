@@ -1,149 +1,67 @@
-import Link from "next/link";
-import React from "react";
+import Link from "next/link"
+import { readSiteContent } from "@/lib/siteContent"
 
-const Footer: React.FC = () => {
-  const year: number = new Date().getFullYear();
-
+export default function Footer() {
+  const sc = readSiteContent()
+  const f = sc.footer || {}
   return (
-    <footer className="bg-slate-950 text-slate-200 border-t border-slate-800 px-6 py-16">
-      <div className="max-w-7xl mx-auto">
-
-        {/* CTA SECTION */}
-        <div className="bg-gradient-to-br from-slate-900 to-slate-800 border border-slate-700 rounded-2xl p-8 text-center mb-14">
-          <h2 className="text-2xl font-semibold text-white mb-3">
-            Ready to Join a Meditation Workshop or Retreat?
-          </h2>
-          <p className="text-slate-400 mb-6">
-            Learn effortless meditation, reset your nervous system,
-            and deepen your inner clarity.
-          </p>
-
-          <div className="flex flex-wrap justify-center gap-4">
-            <a
-              href="https://wa.me/9779841647283"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="bg-green-500 hover:bg-green-600 text-black font-semibold px-6 py-3 rounded-xl transition"
-            >
-              💬 WhatsApp
-            </a>
-
-            <a
-              href="mailto:meditationastro1@gmail.com"
-              className="bg-slate-700 hover:bg-slate-600 text-white font-semibold px-6 py-3 rounded-xl transition border border-slate-600"
-            >
-              ✉️ Email
-            </a>
-
-            <a
-              href="tel:+9779841647283"
-              className="border border-slate-600 hover:bg-slate-900 text-white font-semibold px-6 py-3 rounded-xl transition"
-            >
-              📞 Call
-            </a>
+    <footer className="border-t border-white/10 bg-[#070707] text-white">
+      <div className="max-w-7xl mx-auto px-6 py-14 grid md:grid-cols-4 gap-10">
+        <div className="space-y-3">
+          <div className="font-semibold text-lg">Clue UX</div>
+          <p className="text-sm text-white/60">Meditation retreats in Nepal, immersive programs, and authentic Vedic astrology guidance.</p>
+          <div className="text-xs text-white/50">
+            {f.location || "Nepal"}<br />
+            {f.email || "meditationastro1@gmail.com"}<br />
+            WhatsApp: {f.whatsapp || "+977 9823376110"}
           </div>
         </div>
 
-        {/* 6 BOX GRID */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
-
-          {/* Box 1 */}
-          <div>
-            <h4 className="text-white font-semibold mb-3">About AnswerForSelf</h4>
-            <p className="text-slate-400 text-sm leading-relaxed">
-              Meditation workshops and retreats designed to reduce stress,
-              improve clarity, and build a sustainable daily practice.
-            </p>
-          </div>
-
-          {/* Box 2 */}
-          <div>
-            <h4 className="text-white font-semibold mb-3">Programs</h4>
-            <ul className="text-slate-400 text-sm space-y-2">
-              <li>Vedic Meditation Workshop (4 Sessions)</li>
-              <li>Weekend Meditation Retreat</li>
-              <li>Private Meditation Coaching</li>
-              <li>Group Meditation Events</li>
-            </ul>
-          </div>
-
-          {/* Box 3 */}
-          <div>
-            <h4 className="text-white font-semibold mb-3">Contact</h4>
-            <p className="text-slate-400 text-sm leading-relaxed">
-              Kathmandu, Nepal (Online Available)<br />
-              WhatsApp:{" "}
-              <a
-                href="https://wa.me/9779841647283"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-sky-400 hover:text-white transition"
-              >
-                +977 9841647283
-              </a>
-              <br />
-              Email:{" "}
-              <a
-                href="mailto:meditationastro1@gmail.com"
-                className="text-sky-400 hover:text-white transition"
-              >
-                meditationastro1@gmail.com
-              </a>
-            </p>
-          </div>
-
-          {/* Box 4 */}
-          <div>
-            <h4 className="text-white font-semibold mb-3">Workshop Format</h4>
-            <p className="text-slate-400 text-sm leading-relaxed">
-              Structured 4-session course<br />
-              20 minutes, twice daily practice<br />
-              Retreats: 2–7 days (seasonal)<br />
-              Small groups for personal guidance
-            </p>
-          </div>
-
-          {/* Box 5 */}
-          <div>
-            <h4 className="text-white font-semibold mb-3">Quick Links</h4>
-            <ul className="text-slate-400 text-sm space-y-2">
-              <li><Link href="/workshop" className="hover:text-white transition">Meditation Workshop</Link></li>
-              <li><Link href="/retreats" className="hover:text-white transition">Retreats</Link></li>
-              <li><Link href="/book" className="hover:text-white transition">Book / Register</Link></li>
-              <li><Link href="/faq" className="hover:text-white transition">FAQ</Link></li>
-              <li><Link href="/contact" className="hover:text-white transition">Contact</Link></li>
-            </ul>
-          </div>
-
-          {/* Box 6 */}
-          <div>
-            <h4 className="text-white font-semibold mb-3">Important Notice</h4>
-            <p className="text-slate-400 text-sm leading-relaxed">
-              Meditation supports wellbeing and clarity but is not a substitute
-              for medical or mental health care. Please consult qualified professionals
-              for serious concerns.
-            </p>
-          </div>
-
-        </div>
-
-        {/* Bottom Bar */}
-        <div className="mt-14 pt-6 border-t border-slate-800 flex flex-col sm:flex-row gap-4 items-center justify-between text-slate-500 text-sm">
-          <div>© {year} answerforself.com • All Rights Reserved</div>
-
-          <div className="flex gap-6">
-            <Link href="/privacy-policy" className="hover:text-white transition">
-              Privacy Policy
-            </Link>
-            <Link href="/terms" className="hover:text-white transition">
-              Terms
-            </Link>
+        <div className="space-y-3">
+          <div className="text-sm font-semibold">Quick Links</div>
+          <div className="grid gap-2 text-sm text-white/70">
+            <Link className="hover:text-white" href="/retreats">Retreats</Link>
+            <Link className="hover:text-white" href="/vedic-astrology">Astrology Services</Link>
+            <Link className="hover:text-white" href="/programs">Programs</Link>
+            <Link className="hover:text-white" href="/h/blog">Blog</Link>
+            <Link className="hover:text-white" href="/h/downloads">Free Guides</Link>
+            <Link className="hover:text-white" href="/h/music">Mantras / Music</Link>
+            <Link className="hover:text-white" href="/gallery">Gallery</Link>
+            <Link className="hover:text-white" href="/tools">Tools</Link>
           </div>
         </div>
 
+        <div className="space-y-3">
+          <div className="text-sm font-semibold">Upcoming Retreat Dates</div>
+          <div className="text-sm text-white/60">
+            Visit <Link href="/retreats" className="underline">Retreats</Link> for latest schedules and deposits from Feb 2026 onwards.
+          </div>
+          <div className="mt-3 text-sm font-semibold">Newsletter</div>
+          <div className="text-sm text-white/60">{f.newsletterSubtitle || "Receive weekly wisdom."}</div>
+          <form className="mt-3 flex gap-2">
+            <input className="flex-1 rounded-xl bg-black/40 border border-white/10 px-3 py-2 text-sm" placeholder="Email address" />
+            <button className="bg-white text-black px-4 py-2 rounded-xl text-sm">Join</button>
+          </form>
+          <div className="text-xs text-white/40">Newsletter form can be connected to Mailchimp/ConvertKit later.</div>
+        </div>
+
+        <div className="space-y-3">
+          <div className="text-sm font-semibold">Legal</div>
+          <div className="grid gap-2 text-sm text-white/70">
+            <Link className="hover:text-white" href="/h/legal/privacy">Privacy Policy</Link>
+            <Link className="hover:text-white" href="/h/legal/terms">Terms of Use</Link>
+          </div>
+          <div className="pt-4 text-sm font-semibold">Social</div>
+          <div className="grid gap-2 text-sm text-white/70">
+            <a className="hover:text-white" href="#" aria-label="Instagram">Instagram</a>
+            <a className="hover:text-white" href="#" aria-label="YouTube">YouTube</a>
+            <a className="hover:text-white" href="#" aria-label="Facebook">Facebook</a>
+          </div>
+        </div>
+      </div>
+      <div className="border-t border-white/10 py-6 text-center text-xs text-white/40">
+        © {new Date().getFullYear()} Clue UX. All rights reserved.
       </div>
     </footer>
-  );
-};
-
-export default Footer;
+  )
+}

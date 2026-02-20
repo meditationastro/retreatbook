@@ -1,0 +1,243 @@
+{
+  "home": {
+    "heroTitle": "Transform Your Inner World Through Meditation & Vedic Wisdom",
+    "heroSubtitle": "A sanctuary for spiritual awakening, immersive retreats, and authentic Vedic astrology guidance.",
+    "heroVideoUrl": "",
+    "pathways": [
+      {
+        "title": "Meditation Practice",
+        "desc": "Daily practices for clarity, presence, and calm.",
+        "href": "/meditation"
+      },
+      {
+        "title": "Immersive Spiritual Retreats",
+        "desc": "Luxury retreats in Nepal with guided schedules.",
+        "href": "/retreats"
+      },
+      {
+        "title": "Vedic Astrology Guidance",
+        "desc": "Authentic Jyotish consultations and remedies.",
+        "href": "/vedic-astrology"
+      }
+    ],
+    "founder": {
+      "name": "Founder / Guide",
+      "bio": "A lifelong practitioner devoted to meditation, mantra, and Himalayan wisdom traditions.",
+      "lineage": "Himalayan meditation, mantra, and Jyotish foundations.",
+      "philosophy": "Simple daily practice, truth, compassion, and integration.",
+      "image": "/img/founder.png",
+      "href": "/about"
+    }
+  },
+  "about": {
+    "title": "Our Spiritual Lineage & Mission",
+    "rich": "## Founder Story\n\nShare your story here.\n\n## Lineage & Teachers\n\nAdd lineage details.\n\n## Mission & Vision\n\nAdd your mission.\n"
+  },
+  "meditation": {
+    "intro": "Meditation for Inner Clarity & Awakening",
+    "rich": "Meditation is the simplest doorway into presence.",
+    "practices": [
+      {
+        "title": "Guided Meditation",
+        "desc": "Step-by-step calm and clarity.",
+        "benefits": [
+          "Relaxation",
+          "Focus",
+          "Emotional balance"
+        ],
+        "mediaUrl": ""
+      },
+      {
+        "title": "Silent Meditation",
+        "desc": "Deep stillness beyond words.",
+        "benefits": [
+          "Insight",
+          "Stability",
+          "Peace"
+        ],
+        "mediaUrl": ""
+      },
+      {
+        "title": "Mantra Meditation",
+        "desc": "Sacred sound for purification.",
+        "benefits": [
+          "Clarity",
+          "Devotion",
+          "Energy"
+        ],
+        "mediaUrl": ""
+      },
+      {
+        "title": "Breath Awareness",
+        "desc": "Breath as anchor.",
+        "benefits": [
+          "Calm",
+          "Grounding",
+          "Awareness"
+        ],
+        "mediaUrl": ""
+      },
+      {
+        "title": "Chakra Meditation",
+        "desc": "Energy center awareness.",
+        "benefits": [
+          "Alignment",
+          "Vitality",
+          "Balance"
+        ],
+        "mediaUrl": ""
+      }
+    ],
+    "programs": [
+      {
+        "title": "7-Day Meditation Journey",
+        "desc": "A gentle daily system for beginners.",
+        "cta": "Join Now",
+        "href": "/programs"
+      },
+      {
+        "title": "21-Day Inner Transformation",
+        "desc": "Deepen discipline and insight.",
+        "cta": "Join Now",
+        "href": "/programs"
+      },
+      {
+        "title": "Monthly Membership",
+        "desc": "Ongoing guidance and community.",
+        "cta": "Join Now",
+        "href": "/member"
+      }
+    ]
+  },
+  "astrology": {
+    "title": "Authentic Vedic Astrology Consultations",
+    "introRich": "Jyotish (Vedic astrology) is a sacred map of karma, timing, and transformation.",
+    "services": [
+      {
+        "slug": "birth-chart-reading",
+        "title": "Birth Chart Reading",
+        "desc": "A complete chart analysis with guidance.",
+        "duration": "60-90 min",
+        "price": "USD 99",
+        "featured": true
+      },
+      {
+        "slug": "marriage-compatibility",
+        "title": "Marriage Compatibility",
+        "desc": "Relationship dynamics and compatibility.",
+        "duration": "60 min",
+        "price": "USD 129",
+        "featured": false
+      },
+      {
+        "slug": "career-guidance",
+        "title": "Career Guidance",
+        "desc": "Timing, talents, and next steps.",
+        "duration": "60 min",
+        "price": "USD 99",
+        "featured": false
+      },
+      {
+        "slug": "life-purpose-reading",
+        "title": "Life Purpose Reading",
+        "desc": "Dharma + direction clarity.",
+        "duration": "60 min",
+        "price": "USD 119",
+        "featured": true
+      },
+      {
+        "slug": "annual-prediction",
+        "title": "Annual Prediction (Varshaphal)",
+        "desc": "Your yearly roadmap with remedies.",
+        "duration": "75 min",
+        "price": "USD 149",
+        "featured": false
+      },
+      {
+        "slug": "muhurta",
+        "title": "Muhurta (Auspicious Timing)",
+        "desc": "Best timing for important events.",
+        "duration": "45-60 min",
+        "price": "USD 89",
+        "featured": false
+      }
+    ]
+  },
+  "programs": {
+    "title": "Spiritual Training Programs",
+    "categories": [
+      {
+        "slug": "beginner-meditation",
+        "title": "Beginner Meditation Course",
+        "duration": "4 weeks",
+        "mode": "Online / In-Person",
+        "curriculum": [
+          "Breath basics",
+          "Mantra intro",
+          "Daily routine"
+        ],
+        "price": "USD 149"
+      },
+      {
+        "slug": "teacher-training",
+        "title": "Advanced Teacher Training",
+        "duration": "8-12 weeks",
+        "mode": "In-Person",
+        "curriculum": [
+          "Teaching method",
+          "Ethics",
+          "Retreat facilitation"
+        ],
+        "price": "USD 799"
+      },
+      {
+        "slug": "astrology-certification",
+        "title": "Astrology Certification",
+        "duration": "12 weeks",
+        "mode": "Online",
+        "curriculum": [
+          "Chart basics",
+          "Dashas",
+          "Remedies"
+        ],
+        "price": "USD 999"
+      },
+      {
+        "slug": "vedic-philosophy",
+        "title": "Vedic Philosophy Study",
+        "duration": "6 weeks",
+        "mode": "Online",
+        "curriculum": [
+          "Bhagavad Gita",
+          "Upanishads",
+          "Daily integration"
+        ],
+        "price": "USD 249"
+      }
+    ]
+  },
+  "testimonials": [
+    {
+      "name": "Student A",
+      "quote": "A life-changing retreat. Deep peace and clarity.",
+      "location": "Nepal"
+    },
+    {
+      "name": "Student B",
+      "quote": "The astrology reading was accurate and compassionate.",
+      "location": "Online"
+    },
+    {
+      "name": "Student C",
+      "quote": "The daily schedule and guidance helped me transform habits.",
+      "location": "Kathmandu"
+    }
+  ],
+  "footer": {
+    "newsletterTitle": "Receive weekly wisdom",
+    "newsletterSubtitle": "Meditation tips, retreat dates, and Jyotish insights.",
+    "location": "Kathmandu, Nepal",
+    "email": "meditationastro1@gmail.com",
+    "whatsapp": "+977 9823376110"
+  }
+}

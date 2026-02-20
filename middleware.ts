@@ -1,67 +1,22 @@
-import authConfig from "@/auth.config"
-import NextAuth from "next-auth"
-import {
-  DEFAULT_LOGIN_REDIRECT,
-  apiAuthPrefix,
-  authRoutes,
-  publicRoutes,
-} from "@/routes"
+import { NextResponse } from "next/server"
+import type { NextRequest } from "next/server"
 
-const { auth } = NextAuth(authConfig)
+export function middleware(req: NextRequest) {
+  const { pathname } = req.nextUrl
+  if (!pathname.startsWith("/admin")) return NextResponse.next()
 
-// See https://clerk.com/docs/references/nextjs/auth-middleware for more information about configuring your Middleware
+  if (pathname.startsWith("/admin/login")) return NextResponse.next()
 
-export default auth((req) => {
-  const { nextUrl } = req
-  const isLoggedIn = !!req.auth
-  const isApiAuthRoute = nextUrl.pathname.startsWith(apiAuthPrefix)
-  const isPublicRoute = publicRoutes.includes(nextUrl.pathname)
-  const isAuthRoute = authRoutes.includes(nextUrl.pathname)
-  const isPublicPrefix = nextUrl.pathname.startsWith('/h')
-  const isApiRoute = nextUrl.pathname.startsWith('/api/')
-  const isBlogRoute = nextUrl.pathname.startsWith('/h/blog') || nextUrl.pathname.startsWith('/h/blogs')
-  const isBookingRoute = nextUrl.pathname.startsWith('/api/book-appointment')
+  const token = req.cookies.get("admin_token")?.value
+  const expected = process.env.ADMIN_PASSWORD || ""
+  if (!expected) return NextResponse.redirect(new URL("/admin/login", req.url))
 
-  // Allow all API routes without authentication
-  if (isApiRoute && !isApiAuthRoute) {
-    return
-  }
+  // token is just a match in this lightweight setup
+  if (token !== expected) return NextResponse.redirect(new URL("/admin/login", req.url))
 
-  if (isApiAuthRoute) {
-    return
-  }
-
-  if (isAuthRoute) {
-    if (isLoggedIn) {
-      return Response.redirect(new URL(DEFAULT_LOGIN_REDIRECT, nextUrl))
-    }
-    return
-  }
-
-  // Allow blog routes without authentication
-  if (isBlogRoute) {
-    return
-  }
-
-  // Allow booking route without authentication
-  if (isBookingRoute) {
-    return
-  }
-
-  if (!isLoggedIn && !isPublicRoute && !isPublicPrefix) {
-    let callbackUrl = nextUrl.pathname
-    if (nextUrl.search) {
-      callbackUrl += nextUrl.search
-    }
-    const encodedCallbackUrl = encodeURIComponent(callbackUrl)
-    return Response.redirect(new URL(`/auth/login?callbackUrl=${encodedCallbackUrl}`, nextUrl))
-  }
-  return
-})
+  return NextResponse.next()
+}
 
 export const config = {
-  matcher: [
-    "/((?!_next|[^?]*\\.(?:html?|css|js(?!on)|jpe?g|webp|png|gif|svg|ttf|woff2?|ico|csv|docx?|xlsx?|zip|webmanifest)).*)",
-    "/(api|trpc)(.*)",
-  ],
+  matcher: ["/admin/:path*"],
 }

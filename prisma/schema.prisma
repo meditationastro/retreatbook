@@ -225,3 +225,83 @@ model Appointment {
   createdAt     DateTime @default(now())
   updatedAt     DateTime @updatedAt
 }
+
+enum BookingStatus {
+  PENDING
+  CONFIRMED
+  CANCELLED
+}
+
+enum PaymentStatus {
+  PENDING
+  PAID
+  FAILED
+}
+
+enum PaymentKind {
+  DEPOSIT
+  FULL
+  BALANCE
+}
+
+model Retreat {
+  id            String          @id @default(cuid())
+  slug          String          @unique
+  title         String
+  location      String
+  description   String?         @db.Text
+  heroImage     String?
+  availableDates DateTime[]
+  isActive      Boolean         @default(true)
+  packages      RetreatPackage[]
+  bookings      RetreatBooking[]
+  createdAt     DateTime        @default(now())
+  updatedAt     DateTime        @updatedAt
+}
+
+model RetreatPackage {
+  id           String        @id @default(cuid())
+  retreatId    String
+  retreat      Retreat       @relation(fields: [retreatId], references: [id], onDelete: Cascade)
+  name         String
+  priceCents   Int
+  depositCents Int
+  features     String[]
+  createdAt    DateTime      @default(now())
+  updatedAt    DateTime      @updatedAt
+  bookings     RetreatBooking[]
+}
+
+model RetreatBooking {
+  id           String         @id @default(cuid())
+  retreatId    String
+  retreat      Retreat        @relation(fields: [retreatId], references: [id], onDelete: Cascade)
+  packageId    String
+  package      RetreatPackage @relation(fields: [packageId], references: [id], onDelete: Restrict)
+  name         String
+  email        String
+  phone        String?
+  message      String?        @db.Text
+  selectedDate DateTime
+  status       BookingStatus  @default(PENDING)
+  payments     RetreatPayment[]
+  createdAt    DateTime       @default(now())
+  updatedAt    DateTime       @updatedAt
+
+  @@index([email])
+  @@index([retreatId])
+}
+
+model RetreatPayment {
+  id              String        @id @default(cuid())
+  bookingId       String
+  booking         RetreatBooking @relation(fields: [bookingId], references: [id], onDelete: Cascade)
+  kind            PaymentKind
+  amountCents     Int
+  status          PaymentStatus @default(PENDING)
+  stripeSessionId String?       @unique
+  createdAt       DateTime      @default(now())
+  updatedAt       DateTime      @updatedAt
+
+  @@index([stripeSessionId])
+}

@@ -1,0 +1,22 @@
+{
+  "items": [
+    {
+      "id": "g1",
+      "title": "Himalayan Sunrise",
+      "src": "/img/retreats/gallery1.jpg",
+      "category": "Nature"
+    },
+    {
+      "id": "g2",
+      "title": "Meditation Hall",
+      "src": "/img/retreats/gallery2.jpg",
+      "category": "Practice"
+    },
+    {
+      "id": "g3",
+      "title": "Retreat Meals",
+      "src": "/img/retreats/gallery3.jpg",
+      "category": "Lifestyle"
+    }
+  ]
+}

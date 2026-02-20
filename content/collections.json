@@ -1,0 +1,16 @@
+{
+  "collections": [
+    {
+      "name": "Retreat Guides",
+      "description": "Commercial + practical retreat content."
+    },
+    {
+      "name": "Life Clarity",
+      "description": "Purpose, direction, confidence."
+    },
+    {
+      "name": "Guides & Tools",
+      "description": "Frameworks, prompts, decision tools."
+    }
+  ]
+}

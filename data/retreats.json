@@ -1,0 +1,139 @@
+{
+  "items": [
+    {
+      "slug": "himalayan-silence-retreat",
+      "title": "Himalayan Silence Retreat",
+      "location": "Nagarkot, Nepal",
+      "durationDays": 7,
+      "focus": [
+        "Silence",
+        "Meditation",
+        "Breath"
+      ],
+      "description": "A premium silent retreat with guided sessions, nature walks, and evening rituals.",
+      "highlights": [
+        "Daily guided meditation",
+        "Noble silence periods",
+        "Sunrise practice",
+        "Integration circles"
+      ],
+      "image": "/img/retreats/gallery1.jpg",
+      "priceFrom": "USD 599",
+      "dates": [
+        {
+          "start": "2026-02-15",
+          "end": "2026-02-21",
+          "deposit": "USD 150",
+          "seats": 18
+        },
+        {
+          "start": "2026-03-10",
+          "end": "2026-03-16",
+          "deposit": "USD 150",
+          "seats": 18
+        }
+      ],
+      "schedule": [
+        {
+          "time": "05:30",
+          "label": "Morning meditation"
+        },
+        {
+          "time": "07:00",
+          "label": "Tea + silence walk"
+        },
+        {
+          "time": "09:00",
+          "label": "Workshop: breath & mind"
+        },
+        {
+          "time": "12:30",
+          "label": "Lunch (mindful eating)"
+        },
+        {
+          "time": "15:00",
+          "label": "Rest / journaling"
+        },
+        {
+          "time": "17:00",
+          "label": "Evening ritual + mantra"
+        }
+      ],
+      "accommodation": [
+        {
+          "title": "Deluxe Room",
+          "desc": "Mountain view room with warm comfort.",
+          "amenities": [
+            "Hot shower",
+            "Wi\u2011Fi",
+            "Mountain view"
+          ],
+          "images": [
+            "/img/retreats/gallery2.jpg"
+          ]
+        },
+        {
+          "title": "Suite",
+          "desc": "Premium suite with private balcony.",
+          "amenities": [
+            "Balcony",
+            "Premium bedding",
+            "Tea set"
+          ],
+          "images": [
+            "/img/retreats/gallery3.jpg"
+          ]
+        }
+      ],
+      "faq": [
+        {
+          "q": "Is this suitable for beginners?",
+          "a": "Yes. We offer gentle guidance and optional silence levels."
+        },
+        {
+          "q": "What should I bring?",
+          "a": "Comfortable clothing, journal, warm layers, and an open mind."
+        }
+      ],
+      "pricingTiers": [
+        {
+          "name": "Standard",
+          "price": "USD 599",
+          "includes": [
+            "Accommodation",
+            "Meals",
+            "Program"
+          ],
+          "recommended": true
+        },
+        {
+          "name": "Deluxe",
+          "price": "USD 799",
+          "includes": [
+            "Deluxe room",
+            "All meals",
+            "Program",
+            "1 private session"
+          ],
+          "recommended": false
+        },
+        {
+          "name": "Suite",
+          "price": "USD 999",
+          "includes": [
+            "Suite room",
+            "All meals",
+            "Program",
+            "2 private sessions"
+          ],
+          "recommended": false
+        }
+      ],
+      "gallery": [
+        "/img/retreats/gallery1.jpg",
+        "/img/retreats/gallery2.jpg",
+        "/img/retreats/gallery3.jpg"
+      ]
+    }
+  ]
+}

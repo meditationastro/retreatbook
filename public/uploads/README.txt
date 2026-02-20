@@ -1,0 +1,1 @@
+Upload featured images here, e.g. /uploads/my-post.jpg
