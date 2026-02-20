@@ -132,3 +132,189 @@ yarn dev
 - In your GitHub repo settings, enable **Pages** and set **Build and deployment** to GitHub Actions.
 - Set a repository variable named `NEXT_PUBLIC_BASE_PATH` to `/<your-repo-name>` (leading slash).
 - Push to `main` to deploy.
+
+
+✅ Done — I analyzed your current codebase and added a full advanced system upgrade across the site: Admin Dashboard + Gallery system + Downloads catalog + Meditation Music section + Portfolio + Tools (Vedic astrology + birth chart generator starter + life matrix + inner journey + habit planner) + upgraded Contact with email sending + sitemap expansion + speed/perf font setup.
+
+📦 Download the complete upgraded code (ZIP)
+
+Download clueux-all-features-admin-tools.zip
+
+
+---
+
+✅ What’s added (big features)
+
+🔐 Admin Dashboard (protected)
+
+/admin/login (password login)
+
+/admin dashboard
+
+/admin/bookings (tries Prisma booking table if exists; otherwise shows config hint)
+
+/admin/gallery (add/delete gallery items)
+
+/admin/downloads (lists files in /public/downloads)
+
+/admin/music (lists files in /public/music)
+
+Security via middleware + cookie auth
+
+Uses ADMIN_PASSWORD from env
+
+
+
+---
+
+🖼 Gallery System (public + admin)
+
+Public page: /h/gallery
+
+Admin page manages gallery JSON store
+
+Stored in: data/gallery.json
+
+Works without DB
+
+
+
+---
+
+🎵 Meditation Music Section
+
+Public page: /h/music
+
+Audio player list auto-loads from: public/music/*.mp3
+
+Just upload mp3 files and it appears
+
+
+
+---
+
+📚 Resources / Downloads Catalog
+
+Public page: /h/downloads
+
+Auto lists PDFs/zips/audio from: public/downloads/
+
+Clean “Digital Shop (optional)” placeholder (Stripe can be added later)
+
+
+
+---
+
+🧘 Inner Spiritual Journey + Habit Change Tools
+
+New tools section:
+
+/h/tools/inner-journey
+
+/h/tools/habit-change
+
+/h/tools/life-matrix
+
+
+
+---
+
+🔯 Vedic Astrology + Birth Chart Generator (Starter System)
+
+/h/tools/vedic-birth-chart
+
+Includes form + API response
+
+API: POST /api/tools/birth-chart
+
+
+✅ Outputs:
+
+Approx sidereal sun rashi
+
+Life matrix mapping values
+⚠️ Includes clear disclaimer: exact birth chart needs ephemeris integration (Swiss Ephemeris)
+
+
+
+---
+
+✉️ Contact form connected to Email (real sending)
+
+/h/contact upgraded UI
+
+API: /api/contact
+
+Uses nodemailer (Gmail)
+Env:
+
+EMAIL_USER
+
+EMAIL_PASS (Gmail App Password)
+
+EMAIL_TO
+
+
+Also shows:
+
+WhatsApp: +977 9823376110
+
+Email: meditationastro1@gmail.com
+
+
+
+---
+
+⚡ SEO + Speed / Performance
+
+Added next/font/google Inter for best Core Web Vitals (swap)
+
+Expanded sitemap to include all new pages
+
+Strong internal linking via new menu items
+
+
+
+---
+
+✅ ENV setup (important)
+
+I added .env.example with required values.
+
+Set these on Vercel:
+
+NEXT_PUBLIC_URL=https://your-domain.vercel.app
+
+ADMIN_PASSWORD=change-me
+
+EMAIL_USER=meditationastro1@gmail.com
+EMAIL_PASS=your_gmail_app_password
+EMAIL_TO=meditationastro1@gmail.com
+
+
+---
+
+Next “Best Features” upgrade options (tell me which you want next)
+
+Because your last request also included life prediction / full Vedic chart / matrix mapping / digital store, the next step can be:
+
+1. ✅ Real Vedic Astrology engine (ephemeris integration)
+
+planets, houses, ascendant, nakshatra, dasha (accurate)
+
+
+
+2. ✅ Digital downloads shop (Stripe checkout + secure file delivery + email links)
+
+
+3. ✅ Habit tracker system with user accounts (Supabase auth + dashboard)
+
+
+4. ✅ Advanced blog CMS (MDX + editor + featured images + collections)
+
+
+5. ✅ Retreat booking admin (full booking management + export + email templates)
+
+
+
+Reply with just the number: 1 / 2 / 3 / 4 / 5
